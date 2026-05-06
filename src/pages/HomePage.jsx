@@ -12,6 +12,7 @@ import {
   FileSpreadsheet,
   Activity,
 } from "lucide-react";
+import logo from "../../nexpay.png";
 
 export default function HomePage() {
   const features = [
@@ -57,41 +58,59 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#030712] text-white">
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute left-[-120px] top-[-120px] h-[400px] w-[400px] rounded-full bg-indigo-500/20 blur-[120px]" />
-        <div className="absolute right-[-120px] bottom-[-120px] h-[400px] w-[400px] rounded-full bg-cyan-500/20 blur-[120px]" />
+  <div className="min-h-screen overflow-hidden bg-[#030712] text-white">
+  {/* Background Effects */}
+  <div className="absolute inset-0 -z-10">
+    <div className="absolute left-[-120px] top-[-120px] h-[400px] w-[400px] rounded-full bg-indigo-500/20 blur-[120px]" />
+    <div className="absolute right-[-120px] bottom-[-120px] h-[400px] w-[400px] rounded-full bg-cyan-500/20 blur-[120px]" />
+  </div>
+
+  <div className="mx-auto max-w-7xl px-6 py-8">
+    
+    {/* Navbar */}
+    <header className="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-900/40 px-6 py-4 backdrop-blur-xl">
+      
+      {/* LEFT SIDE */}
+      <div className="flex items-center gap-4">
+        
+        {/* LOGO IMAGE */}
+        <img
+          src={logo}
+          alt="NexPay Logo"
+          className="h-14 w-14 rounded-xl object-cover"
+        />
+
+        {/* TEXT */}
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">
+            NexPay
+          </h1>
+
+          <p className="text-sm text-slate-400">
+            Intelligent Payment Reconciliation Platform
+          </p>
+        </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-8">
-        {/* Navbar */}
-        <header className="flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-900/40 px-6 py-4 backdrop-blur-xl">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">
-              NexPay
-            </h1>
-            <p className="text-sm text-slate-400">
-              Intelligent Payment Reconciliation Platform
-            </p>
-          </div>
+      {/* RIGHT SIDE */}
+      <div className="flex items-center gap-4">
+        
+        <Link
+          to="/login"
+          className="rounded-xl border border-slate-700 px-5 py-2 text-sm font-medium transition hover:border-indigo-500 hover:bg-slate-800"
+        >
+          Login
+        </Link>
 
-          <div className="flex items-center gap-4">
-            <Link
-              to="/login"
-              className="rounded-xl border border-slate-700 px-5 py-2 text-sm font-medium transition hover:border-indigo-500 hover:bg-slate-800"
-            >
-              Login
-            </Link>
+        <Link
+          to="/register"
+          className="rounded-xl bg-indigo-500 px-5 py-2 text-sm font-medium text-white transition hover:bg-indigo-400"
+        >
+          Get Started
+        </Link>
 
-            <Link
-              to="/register"
-              className="rounded-xl bg-indigo-500 px-5 py-2 text-sm font-medium text-white transition hover:bg-indigo-400"
-            >
-              Get Started
-            </Link>
-          </div>
-        </header>
+      </div>
+    </header>
 
         {/* Hero Section */}
         <section className="relative py-28">

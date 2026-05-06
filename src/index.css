@@ -2,9 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 html,
 body,
 #root {
   height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.13), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(99, 102, 241, 0.2), transparent 35%),
+    #020617;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(14px);
 }
 

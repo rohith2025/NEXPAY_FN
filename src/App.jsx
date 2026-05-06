@@ -29,7 +29,7 @@ export default function App() {
           }
         />
         <Route
-          path="/event/:id"
+          path="/events/:id"
           element={
             <RequireAuth>
               <EventPage />

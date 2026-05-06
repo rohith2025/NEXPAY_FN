@@ -91,7 +91,7 @@ export default function Dashboard() {
             {events.map((ev) => (
               <button
                 key={ev._id}
-                onClick={() => navigate(`/event/${ev._id}`)}
+                onClick={() => navigate(`/events/${ev._id}`)}
                 className="text-left"
               >
                 <div className="rounded-lg border bg-white p-5 shadow-sm hover:bg-slate-50">
